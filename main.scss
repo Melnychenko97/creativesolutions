@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|PT+Sans:400i');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@mixin transparentVision {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  background-color: #9f9acf;
+  opacity: 0.5;
+}
+
+@mixin imageBackground {
+  position: absolute;
+  z-index: 1;
+  background-size: cover;
+}
+
+@mixin headerSizing {
+  width: 100%;
+  height: 1070px;
+}
+
+@mixin services {
+  width: 50%;
+  height: 400px;
+}
+
+@mixin centeringElements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin servicesSizing {
+  width: 100%;
+  height: 800px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+
+  .header {
+    margin: 0 5%;
+    width: 90%;
+    height: 1070px;
+    position: relative;
+
+    &__transparent {
+      @include transparentVision;
+      @include headerSizing;
+    }
+
+    &__background {
+      @include imageBackground;
+      background-image: url("Assets/header-min.png");
+      @include headerSizing;
+    }
+
+    &__top {
+      position: absolute;
+      z-index: 3;
+      @include headerSizing;
+    }
+
+    &__head {
+      margin: 0 15.31%;
+      width: 68.6%;
+      height: 90px;
+      display: flex;
+    }
+
+    &__logo {
+      margin: 36px 0 0 0;
+      width: 30%;
+
+      &--img {
+        width: 54px;
+        height: 72px;
+      }
+    }
+    &__nav {
+      margin: 58px 0 0;
+      width: 70%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(n) {
+        list-style: none;
+        font-family: "Overpass Mono", monospace;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        a {
+          color: #ffffff;
+
+          &:hover {
+            color: #94ceba;
+            font-size: 26px;
+          }
+        }
+      }
+    }
+
+    &__footer {
+
+      h1 {
+        margin-top: 300px;
+        text-align: center;
+        color: #fefefb;
+        font-family: "Overpass Mono", monospace;
+        font-size: 72px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        text-align: center;
+        color: #fefdfd;
+        font-family: "PT Sans", sans-serif;
+        font-size: 30px;
+        font-style: italic;
+      }
+    }
+
+  }
+
+  .main {
+    margin: 0 5%;
+    width: 90%;
+    height: 1600px;
+    background-color: #ebebeb;
+
+    &__intro {
+      margin: 0 13.4%;
+      width: 73.125%;
+      height: 800px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__photo {
+      position: relative;
+      margin-top: 124px;
+      width: 32.5%;
+      height: 555px;
+      background-size: cover;
+      background-image: url("Assets/woman back.png");
+      z-index: 1;
+
+    }
+    &__cover {
+      position: absolute;
+      width: 100%;
+      height: 555px;
+      background-color: #9f9acf;
+      opacity: 0.5;
+      z-index: 2;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__about {
+      margin-top: 75px;
+      width: 100%;
+      position: absolute;
+      z-index: 3;
+      @include centeringElements;
+
+      img {
+        width: 30%;
+        height: auto;
+      }
+
+      p {
+        margin-top: 45px;
+        color: #fefbfc;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+
+    &__info {
+      margin-top: 124px;
+      width: 67.5%;
+      height: 555px;
+    }
+
+    &__text {
+      margin: 78px 4.3% 93px 15.6%;
+      p {
+        color: #665f60;
+        font-family: "PT Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__more {
+      width: 195px;
+      height: 50px;
+      border: 1px solid #7d7a7c;
+      background-color: #ebebeb;
+      color: #7d7a7c;
+      font-family: "PT Sans", sans-serif;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    &__services {
+      margin: 0 13.4%;
+      width: 73.125%;
+      height: 800px;
+      display: flex;
+
+      img {
+        margin-top: 99px;
+        margin-bottom: 30px;
+        width: 20%;
+        height: auto;
+      }
+
+      h5 {
+        margin-bottom: 20px;
+        color: #665f60;
+        font-family: "PT Sans", sans-serif;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+
+      p {
+        width: 50.8%;
+        color: #665f60;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        text-align: center;
+      }
+
+      &-graphic, &-mobdev {
+        background-color: #dbdbdb;
+        @include services;
+        @include centeringElements;
+      }
+
+      &-webdev, &-seo {
+        background-color: #ebebeb;
+        @include services;
+        @include centeringElements;
+      }
+    }
+
+    &__services-variations {
+      width: 66.6%;
+      height: 800px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__our-services {
+      width: 33.3%;
+      height: 800px;
+      position: relative;
+    }
+
+    &__transparent {
+      @include transparentVision;
+      @include servicesSizing;
+    }
+
+    &__background {
+      @include imageBackground;
+      @include servicesSizing;
+      background-image: url("Assets/our services.png");
+    }
+
+    &__services-block {
+      position: absolute;
+      @include servicesSizing;
+      z-index: 3;
+      @include centeringElements;
+
+      img {
+        margin-top: 116px;
+      }
+
+      h3 {
+        color: #fefcfd;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin-top: 115px;
+        color: #fefcfd;
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-style: italic;
+      }
+
+      .borat {
+        margin-top: 0;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+      }
+    }
+
+    &__works {
+      width: 100%;
+      height: 1000px;
+      position: relative;
+    }
+
+    &__transparent-works {
+      width: 100%;
+      height: 1000px;
+      @include transparentVision;
+      opacity: 0.95;
+    }
+    &__background-works {
+      width: 100%;
+      height: 1000px;
+      @include imageBackground;
+      background-image: url("Assets/DeathtoStock_Wired3.jpg.png");
+    }
+    &__title {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 1000px;
+    }
+    &__title-header {
+      width: 100%;
+      height: 220px;
+      @include centeringElements;
+
+      img {
+        margin-top: 49px;
+        width: 5%;
+        height: auto;
+
+      }
+
+      h3 {
+        margin-top: 36px;
+        color: #fefcfd;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+
+    &__work {
+      width: 100%;
+      height: 666px;
+
+      li {
+        @include centeringElements;
+
+        .slide {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

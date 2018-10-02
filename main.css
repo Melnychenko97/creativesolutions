@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass+Mono:400,700|PT+Sans:400i");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+* {
+  margin: 0;
+  box-sizing: border-box; }
+  * a {
+    text-decoration: none; }
+  * .header {
+    margin: 0 5%;
+    width: 90%;
+    height: 1070px;
+    position: relative; }
+    * .header__transparent {
+      position: absolute;
+      z-index: 2;
+      margin: 0;
+      background-color: #9f9acf;
+      opacity: 0.5;
+      width: 100%;
+      height: 1070px; }
+    * .header__background {
+      position: absolute;
+      z-index: 1;
+      background-size: cover;
+      background-image: url("Assets/header-min.png");
+      width: 100%;
+      height: 1070px; }
+    * .header__top {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 1070px; }
+    * .header__head {
+      margin: 0 15.31%;
+      width: 68.6%;
+      height: 90px;
+      display: flex; }
+    * .header__logo {
+      margin: 36px 0 0 0;
+      width: 30%; }
+      * .header__logo--img {
+        width: 54px;
+        height: 72px; }
+    * .header__nav {
+      margin: 58px 0 0;
+      width: 70%;
+      height: 90px;
+      display: flex;
+      justify-content: space-between; }
+      * .header__nav:nth-child(n) {
+        list-style: none;
+        font-family: "Overpass Mono", monospace;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase; }
+        * .header__nav:nth-child(n) a {
+          color: #ffffff; }
+          * .header__nav:nth-child(n) a:hover {
+            color: #94ceba;
+            font-size: 26px; }
+    * .header__footer h1 {
+      margin-top: 300px;
+      text-align: center;
+      color: #fefefb;
+      font-family: "Overpass Mono", monospace;
+      font-size: 72px;
+      font-weight: 700;
+      text-transform: uppercase; }
+    * .header__footer h2 {
+      text-align: center;
+      color: #fefdfd;
+      font-family: "PT Sans", sans-serif;
+      font-size: 30px;
+      font-style: italic; }
+  * .main {
+    margin: 0 5%;
+    width: 90%;
+    height: 1600px;
+    background-color: #ebebeb; }
+    * .main__intro {
+      margin: 0 13.4%;
+      width: 73.125%;
+      height: 800px;
+      display: flex;
+      justify-content: space-between; }
+    * .main__photo {
+      position: relative;
+      margin-top: 124px;
+      width: 32.5%;
+      height: 555px;
+      background-size: cover;
+      background-image: url("Assets/woman back.png");
+      z-index: 1; }
+    * .main__cover {
+      position: absolute;
+      width: 100%;
+      height: 555px;
+      background-color: #9f9acf;
+      opacity: 0.5;
+      z-index: 2; }
+      * .main__cover:hover {
+        opacity: 0.7; }
+    * .main__about {
+      margin-top: 75px;
+      width: 100%;
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      * .main__about img {
+        width: 30%;
+        height: auto; }
+      * .main__about p {
+        margin-top: 45px;
+        color: #fefbfc;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase; }
+    * .main__info {
+      margin-top: 124px;
+      width: 67.5%;
+      height: 555px; }
+    * .main__text {
+      margin: 78px 4.3% 93px 15.6%; }
+      * .main__text p {
+        color: #665f60;
+        font-family: "PT Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 400; }
+    * .main form {
+      display: flex;
+      justify-content: center; }
+    * .main__more {
+      width: 195px;
+      height: 50px;
+      border: 1px solid #7d7a7c;
+      background-color: #ebebeb;
+      color: #7d7a7c;
+      font-family: "PT Sans", sans-serif;
+      font-size: 20px;
+      font-style: italic; }
+    * .main__services {
+      margin: 0 13.4%;
+      width: 73.125%;
+      height: 800px;
+      display: flex; }
+      * .main__services img {
+        margin-top: 99px;
+        margin-bottom: 30px;
+        width: 20%;
+        height: auto; }
+      * .main__services h5 {
+        margin-bottom: 20px;
+        color: #665f60;
+        font-family: "PT Sans", sans-serif;
+        font-size: 24px;
+        text-transform: uppercase; }
+      * .main__services p {
+        width: 50.8%;
+        color: #665f60;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 18px;
+        font-style: italic;
+        text-align: center; }
+      * .main__services-graphic, * .main__services-mobdev {
+        background-color: #dbdbdb;
+        width: 50%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      * .main__services-webdev, * .main__services-seo {
+        background-color: #ebebeb;
+        width: 50%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+    * .main__services-variations {
+      width: 66.6%;
+      height: 800px;
+      display: flex;
+      flex-wrap: wrap; }
+    * .main__our-services {
+      width: 33.3%;
+      height: 800px;
+      position: relative; }
+    * .main__transparent {
+      position: absolute;
+      z-index: 2;
+      margin: 0;
+      background-color: #9f9acf;
+      opacity: 0.5;
+      width: 100%;
+      height: 800px; }
+    * .main__background {
+      position: absolute;
+      z-index: 1;
+      background-size: cover;
+      width: 100%;
+      height: 800px;
+      background-image: url("Assets/our services.png"); }
+    * .main__services-block {
+      position: absolute;
+      width: 100%;
+      height: 800px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      * .main__services-block img {
+        margin-top: 116px; }
+      * .main__services-block h3 {
+        color: #fefcfd;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase; }
+      * .main__services-block p {
+        margin-top: 115px;
+        color: #fefcfd;
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-style: italic; }
+      * .main__services-block .borat {
+        margin-top: 0;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700; }
+    * .main__works {
+      width: 100%;
+      height: 1000px;
+      position: relative; }
+    * .main__transparent-works {
+      width: 100%;
+      height: 1000px;
+      position: absolute;
+      z-index: 2;
+      margin: 0;
+      background-color: #9f9acf;
+      opacity: 0.5;
+      opacity: 0.95; }
+    * .main__background-works {
+      width: 100%;
+      height: 1000px;
+      position: absolute;
+      z-index: 1;
+      background-size: cover;
+      background-image: url("Assets/DeathtoStock_Wired3.jpg.png"); }
+    * .main__title {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 1000px; }
+    * .main__title-header {
+      width: 100%;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      * .main__title-header img {
+        margin-top: 49px;
+        width: 5%;
+        height: auto; }
+      * .main__title-header h3 {
+        margin-top: 36px;
+        color: #fefcfd;
+        font-family: "Overpass Mono", monospace;
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase; }
+    * .main__work {
+      width: 100%;
+      height: 666px; }
+      * .main__work li {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        * .main__work li .slide {
+          width: 100px;
+          height: 100px; }
+
+/*# sourceMappingURL=main.css.map */
